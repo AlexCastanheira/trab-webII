@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs de Acesso</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/access-logs.css">
+</head>
+
+<body>
+
+    <%- include('includes/navbar') %>
+
+        <div class="container">
+            <h1></h1>
+            <h1>Logs de Acesso</h1>
+
+            <table class="logs-table">
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Usuário</th>
+                        <th>Status</th>
+                        <th>Data/Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% accessLogs.forEach(log=> { %>
+                        <tr>
+                            <td>
+                                <%= log.url %>
+                            </td>
+                            <td>
+                                <%= log.user ? log.user.username : 'Usuário Desconhecido' %>
+                            </td>
+                            <td class="<%= log.granted ? 'granted' : 'denied' %>">
+                                <%= log.granted ? 'Acesso Permitido' : 'Acesso Negado' %>
+                            </td>
+                            <td>
+                                <%= new Date(log.createdAt).toLocaleString() %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+        </div>
+
+</body>
+
+</html>

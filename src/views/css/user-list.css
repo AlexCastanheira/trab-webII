@@ -1,0 +1,91 @@
+/* Estilos específicos para a página de Lista de Usuários */
+
+/* Título da página */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #2c3e50;
+    margin-top: 40px;
+}
+
+/* Botão de Voltar para o Dashboard */
+div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+/* Estilos da Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+/* Estilo das imagens de perfil */
+img {
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+/* Módulos de Usuários */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    list-style-type: circle;
+}
+
+p {
+    color: #7f8c8d;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}

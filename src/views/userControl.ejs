@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Usuários</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/user-control.css">
+</head>
+
+<%- include('includes/navbar') %>
+
+    <body>
+        <div class="container">
+            <h1>Controle de Usuários</h1>
+            <p>Aqui você pode criar novos usuários e alterar permissões de usuários existentes.</p>
+
+            <div class="buttons">
+                <a href="/createUser" class="btn">Criar Novo Usuário</a>
+                <a href="/managePermissions" class="btn">Alterar Permissões</a>
+            </div>
+        </div>
+    </body>
+
+</html>

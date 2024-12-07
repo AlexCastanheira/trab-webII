@@ -1,0 +1,64 @@
+<!-- views/userList.ejs -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/user-list.css">
+</head>
+
+<%- include('includes/navbar') %>
+
+
+    <body>
+        <h1>Lista de Usuários</h1>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Imagem de Perfil</th>
+                    <th>Papel</th>
+                    <th>Módulos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(user=> { %>
+                    <tr>
+                        <td>
+                            <%= user.username %>
+                        </td>
+                        <td>
+                            <%= user.email %>
+                        </td>
+                        <td><img src="<%= user.profileImage || '/images/default-profile.jpg' %>" alt="Imagem de Perfil"
+                                width="50" height="50"></td>
+                        <td>
+                            <%= user.role %>
+                        <td>
+                            <% if (user.role==='ADMIN' || user.role==='SUPERUSER' ) { %>
+                                <p>Acesso Total</p>
+                                <% } else if (user.modules.length> 0) { %>
+                                    <ul>
+                                        <% user.modules.forEach(module=> { %>
+                                            <li>
+                                                <%= module %>
+                                            </li>
+                                            <% }) %>
+                                    </ul>
+                                    <% } else { %>
+                                        <p>Sem acesso a módulos</p>
+                                        <% } %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </body>
+
+</html>

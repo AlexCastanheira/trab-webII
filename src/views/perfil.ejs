@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/perfil.css">
+
+</head>
+
+<%- include('includes/navbar') %>
+
+    <body>
+        <div class="container">
+            <h1>
+                <%= user.username %>
+            </h1>
+
+
+            <div class="profile-image">
+                <img src="<%= user.profileImage %>" alt="Foto de perfil"
+                    style="width: 150px; height: 150px; border-radius: 50%;">
+
+
+
+            </div>
+
+
+            <form action="/perfil" method="POST" enctype="multipart/form-data">
+
+                <input type="file" id="image" name="image">
+                <button type="submit">Atualizar</button>
+            </form>
+        </div>
+    </body>
+
+</html>

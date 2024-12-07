@@ -1,0 +1,38 @@
+<!-- src/views/dashboard.ejs -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+
+<body>
+
+    <%- include('includes/navbar') %>
+
+        <div class="container">
+            <h1>Bem-vindo, <%= user.username %>
+            </h1>
+            <p>Aqui estão suas opções:</p>
+            <ul>
+                <li><a href="/userList">Lista de usuários</a></li>
+                <li><a href="/financeiro">Financeiro</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/relatorios">Relatórios</a></li>
+                <li><a href="/perfil">Perfil</a></li>
+
+                <!-- Verifica se o usuário é ADMIN ou SUPERUSER -->
+                <% if (user.role==='ADMIN' || user.role==='SUPERUSER' ) { %>
+                    <li><a href="/userControl">Controle de Usuários</a></li>
+                    <li><a href="/logs">Log de acessos</a></li>
+                    <% } %>
+            </ul>
+        </div>
+</body>
+
+</html>

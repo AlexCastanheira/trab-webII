@@ -1,0 +1,77 @@
+/* Estilos específicos para a página de Controle de Usuários */
+
+/* Título da página */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #2c3e50;
+    margin-top: 60px;
+}
+
+/* Descrição da página */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 40px;
+}
+
+/* Container principal */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Estilo para os botões */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons .btn {
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buttons .btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.buttons .btn:active {
+    background-color: #1abc9c;
+    transform: translateY(1px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}

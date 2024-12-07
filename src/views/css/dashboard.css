@@ -1,0 +1,61 @@
+/* Estilo específico para a página de Dashboard */
+
+/* Container principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 100px;
+    /* Espaçamento para não sobrepor a navbar */
+}
+
+/* Título */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Texto de boas-vindas */
+p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Lista de opções */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #0056b3;
+}
+
+/* Ajuste para a responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    ul li {
+        font-size: 16px;
+    }
+}
